@@ -25,7 +25,7 @@ class Boot {
 
     // Build SiteMap
     def sitemap() = SiteMap(
-    		//Menu.i("Template Menu Item") / "showTest",
+    		Menu.i("Template Menu Item") / "showTest",
     		Menu( TestLoc ),
     		Menu("Home") / "index" >> User.AddUserMenusAfter)
 
