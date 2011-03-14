@@ -25,12 +25,12 @@ package liftissue.customloc.lib {
       case Default(id) => Text("TestPage id=" + id )
     })
     
-    def link = new Link[TestPage]( "showTest" :: Nil )
+//    def link = new Link[TestPage]( "showTest" :: Nil )
     
-//    def link = new Link[TestPage](currentValue match {
-//    	case Full(Default(id)) => "test" :: id :: Nil
-//    	case _ => "test" :: "default" :: Nil
-//    }) 
+    def link = new Link[TestPage](currentValue match {
+    	case Full(Default(id)) => "test" :: id :: Nil
+    	case _ => "test" :: "default" :: Nil
+    }) 
 
     def defaultValue = Full(Default("default"))
 
